@@ -2,8 +2,9 @@ class Device{
     String brand;
     boolean powerStatus;
     void turnOn(){
-        powerStatus=true;
-        System.out.println("Pwer turned on");
+        if(powerStatus==true){
+            System.out.println("Turned on..");
+        }
     }
 }
 class Mobile_inherit extends Device{
@@ -16,7 +17,7 @@ class Mobile_inherit extends Device{
     public static void main(String[] args) {
         Mobile_inherit mob = new Mobile_inherit();
         mob.brand="android";
-        mob.powerStatus=false;
+        mob.powerStatus=true;
         mob.batteryLevel=85;
 
         mob.turnOn();
